@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*faz com que o navegador não calcule a dimensão de um elemento somando bordas e margens com altura e largura ---> */
+    font-family: Roboto, sans-serif;
+}
+
+header{
+    background-color: rgb(129, 101, 255);
+    padding: 20ox 0;
+    color:#fff;
+    display:flex;
+    border-bottom: 16px solid rgb(133, 38, 223);
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: rgb(195, 209, 221);
+    padding: 15px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding: 8px;
+}
+
+button{
+    background-color: rgb(38, 183, 38);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#botton-reset{
+    background-color: rgb(233, 27, 27);
+
+}
+
+ul {
+    display: flex; /*Um do lado do outro*/
+    flex-wrap: wrap; /*Pra quando atingir o limite da linha crie-se outra */
+}
+
+ul li {
+    max-width: 33%;
+    list-style: none; /*remove a bolinha no final da foto */
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-image-link{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s; /*leva alguns segundos para aparecer na tela a frase(Ver em tamanho real)*/
+}
+
+.overlay-image-link a {
+    color:#fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-image-link{
+    opacity: 1;
+}
